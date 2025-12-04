@@ -1,6 +1,8 @@
 # Liferay Upgrade Action
 
-GitHub Action to create a new branch and pull request if a new Liferay version is available
+`lgdd/liferay-upgrade-action@v2` create a new branch and pull request if a new Liferay version is available.
+
+This action uses another action you might find useful: https://github.com/lgdd/get-liferay-info-action
 
 ## Requirements
 
@@ -25,15 +27,16 @@ on:
     # https://crontab.guru/every-monday
     - cron: '0 0 * * MON'
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   liferay-upgrade:
-    permissions:
-      contents: write # to push changes
-      pull-requests: write # to create pull requests
     runs-on: ubuntu-latest
     steps:
-      - name: Liferay Upgrade
-        uses: lgdd/liferay-upgrade-action@v1
+      - uses: actions/checkout@v3
+      - uses: lgdd/liferay-upgrade-action@v2
         with:
           java-distribution: 'zulu'
           java-version: '11'
@@ -42,6 +45,32 @@ jobs:
 In this example we run the every monday to follow Liferay weekly release schedule. Of course, you can change the frequency as well as the event list you want this action to be triggered by.
 
 More information about [Github Actions Events](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows).
+
+## v2
+
+In v1, the checkout step was done by default inside that action. Even if you could disable it with an input, it doesn't feel like a good practice to include that in a custom action.
+
+So **In v2 you need to add the checkout step first**:
+
+```diff
+steps:
++     - uses: actions/checkout@v3
+      - uses: lgdd/liferay-upgrade-action@v2
+        with:
+          java-distribution: 'zulu'
+          java-version: '11'
+```
+
+If you were already using the checkout action in v1, you can now remove the input in v2:
+```diff
+steps:
+      - uses: actions/checkout@v3
+      - uses: lgdd/liferay-upgrade-action@v2
+        with:
+          java-distribution: 'zulu'
+          java-version: '11'
+-         checkout: false
+```
 
 ## License
 

@@ -1,5 +1,81 @@
 # Changelog
 
+## [2.1.3](https://github.com/lgdd/liferay-upgrade-action/compare/v2.1.2...v2.1.3) (2024-04-22)
+
+
+### Bug Fixes
+
+* merge commit message ([313d51c](https://github.com/lgdd/liferay-upgrade-action/commit/313d51c46539ba2db74446b6360c0840c440b554))
+
+## [2.1.2](https://github.com/lgdd/liferay-upgrade-action/compare/v2.1.1...v2.1.2) (2024-04-22)
+
+
+### Bug Fixes
+
+* workspace plugin upgrade when product is latest ([d57b8f6](https://github.com/lgdd/liferay-upgrade-action/commit/d57b8f6513c0242341d52aa48065c9f126603caf))
+
+## [2.1.1](https://github.com/lgdd/liferay-upgrade-action/compare/v2.1.0...v2.1.1) (2024-04-15)
+
+
+### Bug Fixes
+
+* upgrade message with breaking change ([afe4fd1](https://github.com/lgdd/liferay-upgrade-action/commit/afe4fd13f25fe24326048c446827047e367dffaa))
+
+## [2.1.0](https://github.com/lgdd/liferay-upgrade-action/compare/v2.0.2...v2.1.0) (2023-06-09)
+
+
+### Features
+
+* add support to upgrade settings.gradle ([1c73b5c](https://github.com/lgdd/liferay-upgrade-action/commit/1c73b5c5b63393dec0e5ca1149ef37a4c105df74)), closes [#7](https://github.com/lgdd/liferay-upgrade-action/issues/7)
+
+
+### Bug Fixes
+
+* missing git add for settings.gradle ([755d11d](https://github.com/lgdd/liferay-upgrade-action/commit/755d11dc4caa945ef776038a5092d8ccf92ff197)), closes [#7](https://github.com/lgdd/liferay-upgrade-action/issues/7)
+* wrong commit message ([ce67554](https://github.com/lgdd/liferay-upgrade-action/commit/ce67554ff562562277fc924edac4d643cd699471))
+
+## [2.0.2](https://github.com/lgdd/liferay-upgrade-action/compare/v2.0.1...v2.0.2) (2023-06-06)
+
+
+### Bug Fixes
+
+* git commit ignore files ([3d8c1a3](https://github.com/lgdd/liferay-upgrade-action/commit/3d8c1a3d78d62cb2f94613eb6b2784505869076c))
+* remove working-directory from cache action ([e0f8483](https://github.com/lgdd/liferay-upgrade-action/commit/e0f848384551aa3c3a91fa1ccb97166a5aee150b))
+
+## [2.0.1](https://github.com/lgdd/liferay-upgrade-action/compare/v2.0.0...v2.0.1) (2023-06-06)
+
+
+### Bug Fixes
+
+* gradle build & getting output ([d534a7d](https://github.com/lgdd/liferay-upgrade-action/commit/d534a7d6afcd4f0da3049d5ccd2b4eef3c45bf35))
+* gradle.properties path ([c963b43](https://github.com/lgdd/liferay-upgrade-action/commit/c963b430e64855329a74732aa7ee148c3309585b))
+* remove working-directory for setup-go ([06ed407](https://github.com/lgdd/liferay-upgrade-action/commit/06ed407191753cc7590c95df9016f9a839efb3c3))
+* use working-directory to properly find workspace files ([5f3dcdb](https://github.com/lgdd/liferay-upgrade-action/commit/5f3dcdb56c68c29f431fee27c4a14b27ad59918f))
+* wrong upgrade branch name reference in yaml ([5d7bd63](https://github.com/lgdd/liferay-upgrade-action/commit/5d7bd63798e241fa8434a40230b27e3eac0eed5e))
+* wrong workspace path for git add ([95d981c](https://github.com/lgdd/liferay-upgrade-action/commit/95d981c151468f82d9086195a5aac8f43a4bd303))
+
+## [2.0.0](https://github.com/lgdd/liferay-upgrade-action/compare/v1.0.2...v2.0.0) (2023-06-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Checkout step included in this action has been removed. You need to add it first in your own workflow before using this action.
+
+### Miscellaneous Chores
+
+* remove the checkout step ([c1f1b0f](https://github.com/lgdd/liferay-upgrade-action/commit/c1f1b0f0c6dc6c960dffc2a730d2885991aebc89))
+
+## [1.0.2](https://github.com/lgdd/liferay-upgrade-action/compare/v1.0.1...v1.0.2) (2023-06-05)
+
+
+### Bug Fixes
+
+* fix output syntax ([47f9d01](https://github.com/lgdd/liferay-upgrade-action/commit/47f9d0134488467bbffb8f3e1cf22ddc4a1eea66))
+* incorrect output keys ([cf9657f](https://github.com/lgdd/liferay-upgrade-action/commit/cf9657f828478c62618b365198eb50906eac34e9))
+* missuse of run (script instead) ([0877cfb](https://github.com/lgdd/liferay-upgrade-action/commit/0877cfbf5bad31f4905d3b6edd650f845aef9c82))
+* pass input to get-liferay-info ([b26ce31](https://github.com/lgdd/liferay-upgrade-action/commit/b26ce31dd0fafa4857377a385eb4902423180b4f))
+* step outputs pass as env vars ([037ced1](https://github.com/lgdd/liferay-upgrade-action/commit/037ced1ac2560ea8e09d7c8f261806b6863880c9))
+
 ## [1.0.1](https://github.com/lgdd/liferay-upgrade-action/compare/v1.0.0...v1.0.1) (2023-06-04)
 
 
